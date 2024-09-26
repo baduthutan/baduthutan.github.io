@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeCaster: The Ultimate Spell Typing Battle RPG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body {
+            scroll-behavior: smooth;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+     
+        .poppins {
+            font-family: "Poppins", sans-serif;
+        }
+        .app-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        .app-subtitle {
+            font-size: 1rem; 
+            font-weight: 600;
+        }
+
+        .desc-header {
+            font-size: 0.8125rem; 
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .desc-content {
+            font-size: 0.75rem; 
+            font-weight: 500;
+            font-style: italic; 
+        }
+
+        .scroll-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
+        }  
+
+        .left-column {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .scrolling-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .scrolling-wrapper img {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .app-title {
+            font-size: 1rem;
+            }
+
+            .app-subtitle {
+                font-size: 0.8125rem; 
+            }
+
+            .desc-header {
+                font-size: 0.75rem; 
+            }
+
+            .desc-content {
+                font-size: 0.5rem;  
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main class="max-w-7xl mx-auto bg-white scroll-container">
+        <!-- Landing Section -->
+        <section class="h-screen grid grid-rows-3 lg:grid-rows-2 gap-y-4 p-5 lg:gap-y-8 lg:p-10 snap-center">
+            <div class="bg-[#EFE8FF] rounded-[2.5rem] flex items-center justify-center col-span-2">
+                <img src="img/vinchenamigo.webp" alt="vinchen amigo logo" class="w-[60vw] sm:w-auto sm:h-12 lg:h-16 object-contain">
+            </div>
+
+            <div class="grid grid-rows-4 grid-cols-1 lg:grid-rows-1 lg:grid-cols-11 gap-4 lg:gap-8 row-span-2 lg:row-span-1">
+
+                <div class="row-span-3 col-span-1 lg:row-span-1 lg:col-span-8 bg-gradient-to-br from-[#4A4A4A] to-[#262626] rounded-[2.5rem] px-6 sm:px-12 flex flex-col justify-center">
+                    <h1 class="poppins text-white font-semibold text-[6.5vw]/normal sm:text-[4.5vw]/relaxed lg:text-[5vh]/relaxed mb-4 lg:mb-9">Dedicated Programmer, Passionate Developer</h1>
+                    <p class="poppins text-white font-medium text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh]">I am currently enrolled in the Apple Developer Academy and bring two years of experience as a freelance developer. My expertise lies in iOS development, with strong proficiency in Swift, SwiftUI, and UIKit. Additionally, I have hands-on experience with JavaScript, PHP, and Laravel, and am passionate about creating innovative solutions across multiple platforms.</p>
+                </div>
+
+                <div class="grid grid-cols-2 row-span-1 col-span-1 lg:row-span-1 lg:col-span-3  lg:grid-cols-1 lg:grid-rows-2 gap-4 lg:gap-8">
+                    <div class="bg-none border-4 border-black rounded-[2.5rem] flex flex-col justify-end overflow-hidden">
+                        <img src="img/mypic.webp" alt="vinchen's picture" class="max-h-full w-auto object-contain">
+                    </div>                    
+                    <div class="bg-[url('img/neon.webp')] rounded-[2.5rem] bg-no-repeat bg-cover bg-center"></div>
+                </div>    
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="h-screen p-5 lg:p-10 snap-center">
+            <div class="h-full bg-[#EFE8FF] rounded-[2.5rem] flex items-center justify-center p-10 sm:p-20">
+                <div class="h-full flex flex-col items-start justify-center">
+                    <img src="img/toc.webp" alt="table of contents" class="h-8 sm:h-12 md:h-16 lg:h-20 img-fluid mb-10">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-16 text-[#1A2A44] overflow-scroll" style="scrollbar-width: none;">
+                        <div>
+                            <div class="border-b-4 border-[#1A2A44] pb-6">
+                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#Eyesistant">Eyesistant: Fashion Color Guide for Partial Colorblind</a>
+                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Develop/iOS App/ADA C7/2024</p>
+                            </div>
+                            <div class="border-b-4 border-[#1A2A44] py-6">
+                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#SunnySide">Sunny Side: Reimagining Weather app for Commuters</a>
+                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Develop/iOS App/ADA C7/2024</p>
+                            </div>
+                            <div class="border-b-4 border-[#1A2A44] py-6">
+                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#SiCon">SiCon: ML Powered License Plate Scanner </a>
+                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/iOS App/ADA C7/2024</p>
+                            </div>
+                            <div class="border-b-4 border-[#1A2A44] sm:border-none py-6">
+                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="SnapOrSplash">Snap or Splash: Reinventing Hole in the Wall game via ML</a>
+                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/MacOS Game/ADA C7/2024</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border-b-4 border-[#1A2A44] py-6 sm:py-0 sm:pb-6">
+                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#TypeCaster">TypeCaster: The Ultimate Spell Typing Battle RPG</a>
+                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/MacOS Game/ADA C7/2024</p>
+                            </div>
+                            <div class="border-b-4 border-[#1A2A44] py-6">
+                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#OddOfficeAR">OddOfficeAR: Escape plan from the unusual scouts room</a>
+                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/iOS AR Game/ADA C7/2024</p>
+                            </div>
+                            <div class="border-b-4 border-[#1A2A44] py-6">
+                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#LonelyScape">LonelyScape: Solve the riddles, escape the loneliness</a>
+                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/iOS AR Game/Academic/2023</p>
+                            </div>
+                            <div class="pt-6">
+                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#Cleonima">Cleonima Invitation: Bringing your birthday invitation to life</a>
+                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Develop/Website/Freelance/2023-present</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="poppins font-medium text-xs sm:text-sm text-[#9B79E5] mt-10">*ADA C7 = Apple Developer Academy@BINUS Program Cohort 7</p>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Main section -->
+        <section class="h-screen flex flex-col lg:grid lg:grid-cols-11 gap-4 px-5 pt-5 lg:gap-16 lg:px-10 lg:pt-10 snap-center overflow-hidden">
+            <!-- Left Column -->
+            <div id="leftColumn" class="px-4 lg:py-4 col-span-11 lg:col-span-3 2xl:col-span-2 left-column flex-shrink-0">
+                <!-- Left column content -->
+            </div>
+        
+            <!-- Scroll Container -->
+            <div id="scrollContainer" class="col-span-11 lg:col-span-8 2xl:col-span-9 flex-grow scroll-container">
+                <!-- Project section goes here -->
+            </div>
+        </section>
+        
+    
+        <!-- Contact Section -->
+        <section class="h-screen grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 gap-4 p-5 lg:gap-8 lg:p-10 snap-center">
+            <!-- First grid cell: full width on small screens, half width on large screens -->
+            <div class="bg-gradient-to-br from-[#4A4A4A] to-[#262626] rounded-[2.5rem] relative overflow-hidden"> 
+                <div class="absolute z-1 right-0 bottom-0 -rotate-[15deg] opacity-75 w-[140vw] sm:w-[100vw] translate-x-[2rem] translate-y-[6vw] lg:w-[85vw] lg:translate-x-[4vw] lg:translate-y-[4vw] overflow-hidden">
+                    <div class="scrolling-wrapper">
+                        <img src="img/cleonima.webp" alt="cleonima catalog image">
+                        <img src="img/cleonima.webp" alt="cleonima catalog image">
+                    </div>
+                </div>
+                <div class="absolute z-2 h-full top-0 left-0 px-8 sm:px-12 py-12 lg:py-20 flex flex-col" id="Cleonima">
+                    <p class="poppins font-regular text-white uppercase mb-4 lg:mb-10 text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh]">i'm currently working with</p>
+                    <p class="poppins font-semibold text-white text-[6.5vw]/tight sm:text-[4.5vw]/tight lg:text-[6vh]/tight">Cleonima Invitations</p>
+                    <p class="poppins font-medium text-white mt-4 lg:mb-10 text-[3.3vw] sm:text-[2.5vw] lg:text-[2.3vh]">Bringing your sweet seventeen<br>birthday invitation to life</p>
+                    <div class="mt-auto bg-[#BFEE61] px-4 py-2 sm:px-5 sm:py-3 w-max rounded-[1.5rem]">
+                        <p class="poppins font-bold text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh] block mb-1">our catalog</p>
+                        <a href="https://bit.ly/cleonimacatalog" class="poppins font-regular underline text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh] block hover:opacity-50">https://bit.ly/cleonimacatalog</a>
+                    </div>                      
+                </div>
+            </div>
+            
+            <div class="grid grid-rows-4 gap-4 lg:grid-rows-5 lg:gap-8">
+                <div class="row-span-3 lg:row-span-4 bg-[#EAEAEA] rounded-[2.5rem] flex justify-center items-center p-8 sm:p-14 xl:p-16">
+                    <div class="h-full flex flex-col items-start justify-center">
+                        <p class="poppins font-semibold text-[#1A2A44] text-balance text-[6vw]/relaxed sm:text-[3.5vw]/relaxed lg:text-[4.3vh]/relaxed">
+                            “ So <span class="font-bold text-[#9B79E5]">don't worry about tomorrow</span>, for tomorrow will bring its own worries. <span class="font-bold text-[#9B79E5]">Today's trouble</span> is <span class="font-bold text-[#9B79E5]">enough for today.</span> “
+                        </p>
+                        <p class="poppins font-medium text-[#1A2A44] text-sm sm:text-md lg:text-lg mt-4 lg:mt-8"> Matthew 6-34 NLT</p>
+                    </div>
+                </div>
+                
+                <div class="row-span-1 bg-[#AB88F6] rounded-[2.5rem] grid grid-cols-2 px-8 py-3 sm:py-4 md:px-[5vw] lg:py-8 lg:px-12 divide-white/75 divide-x-2">
+                    <div class="flex flex-col justify-center">
+                        <h3 class="poppins text-sm sm:text-base lg:text-lg font-semibold text-[#1A2A44] mb-1">Contacts</h3>
+                        <p class="poppins text-white font-regular text-[0.5rem] sm:text-xs lg:text-md tracking-tight"><i class="fa-brands fa-square-whatsapp"></i> (+62) 822 - 2777 - 4026</p>
+                        <p class="poppins text-white font-regular text-[0.5rem] sm:text-xs lg:text-md tracking-tight"><i class="fa-solid fa-square-envelope"></i> vinchen996@gmail.com</p>
+                    </div>
+                    <div class="pl-5 flex justify-center">
+                        <img src="img/copyright.webp" alt="© 2024 Vinchen Amigo. All Rights Reserved." class="object-contain py-auto w-full sm:w-2/3 lg:w-full">
+                    </div>
+                </div>
+            </div>   
+        </section>
+    </main>
+    
+    <script>
+        // Define your projects with all necessary data
+        const projects = [
+            {
+                icon: "img/ai/es.webp",
+                title: "Eyesistant",
+                subtitle: "Fashion Color Guide for Partial Colorblind",
+                year: "2024",
+                role: "iOS Developer",
+                repo: "https://github.com/Ekkh0/eyesistant",
+                design: "https://www.figma.com/design/UMPHpUUL1OMHFYqb4b9vkU/Eyesistant?node-id=672-495&t=5Hg4zFJGJ4u68Nzf-1",
+                demo: "",         
+                publication: "https://medium.com/@vinchenamigo/eyesistant-an-attempt-on-building-inclusivity-for-partially-colorblind-using-uikit-d8365329bb07", 
+                description: "This project aims to assist partially color-blind individuals in overcoming the challenges they face when choosing clothing colors. Many of these individuals struggle with concerns about whether the colors they select suit them personally and are socially acceptable. They often rely on other people's eye for color validation, which can be inconvenient and sometimes embarrassing. The solution is a mobile application that leverages personal color theory to provide personalized color recommendations. By offering tailored guidance, the app empowers users to make confident fashion choices independently.",
+                poster: "img/p/es.webp",
+                code: "Swift, UIKit",
+                stack: "Vision, AVFoundation, CoreImage",
+                tool: "Xcode, VSCode, Github",
+                architecture: "MVC design pattern,<br>UIKit frontend,<br>UserDefault Storage",
+                features: "Face and luminosity detection camera, skin tone fetching,personal color classification, selected color clothes overlay,selected color filtering"
+            },
+            {
+                icon: "img/ai/ss.webp",
+                title: "SunnySide",
+                subtitle: "Reimagining Weather app for Commuters",
+                year: "2024",
+                role: "iOS Front-end Developer, Tech Lead",
+                repo: "https://github.com/baduthutan/GoodHusband",
+                design: "https://www.figma.com/design/Rwqm7eC0xcHFNkDfeaqxf2/nano3?node-id=728-66871&t=Ubn6wVhjTbT66xXj-1",
+                demo: "",         
+                publication: "https://medium.com/@vinchenamigo/my-experience-as-a-tech-lead-on-sunny-side-project-reimagining-weather-app-for-commuters-6186c8535061", 
+                description: "The project Sunny Side reimagines traditional weather apps by focusing on the specific needs of homemakers engaged in outdoor activities. The challenge identified through research was that existing weather apps cover large areas, making it difficult to determine weather conditions for a specific place. The solution is a weather app that allows users to search for precise locations, receive recommendations on what to prepare for those conditions, and pin the location for easy access on the homepage. It utilizes SwiftUI, WeatherKit, and reverse geolocation to enhance user convenience.",
+                poster: "img/p/ss.webp",
+                code: "Swift, SwiftUI",
+                stack: "WeatherKit, CoreLocation, MapKit",
+                tool: "Xcode, VSCode, Github",
+                architecture: "MVVM design pattern,<br>SwiftUI frontend,<br>Singelton UserDefault Storage",
+                features: "Specific location weather forecast, suggestion for current weather, dark mode, English and Bahasa Indonesia language localization"
+            },
+            {
+                icon: "img/ai/sc.webp",
+                title: "SwiftConnect",
+                subtitle: "ML Powered License Plate Scanner",
+                year: "2024",
+                role: "iOS Front-end Developer",
+                repo: "https://github.com/anggaraswn/SICON",
+                design: "https://bit.ly/SiConPrototype",
+                demo: "",         
+                publication: "https://medium.com/@vinchenamigo/building-swiftconnect-how-a-beginner-used-mvvm-for-an-ml-powered-license-plate-scanner-9a8d0f531b9d", 
+                description: "SiCon (Swift Connect), an application designed to assist security personnel in efficiently managing motorcycle parking at GOP 9. The app uses machine learning to scan license plates and quickly retrieve the owner's information—such as name, workplace, front desk number, and license number—from a database. This significantly reduces the time it takes for security to contact the owner of a vehicle that's parked improperly, eliminating the need to go through building management.",
+                poster: "img/p/sc.webp",
+                code: "Swift, SwiftUI",
+                stack: "SwiftData, VisionKit, WhatsApp API",
+                tool: "Xcode, Github",
+                architecture: "MVVM design pattern,<br>SwiftUI frontend,<br>SwiftData Storage",
+                features: "FaceID or password authorization to open app, license number scanner, fetch vehicle owner data, connect to vehicle owner office via WhatsApp"
+            },
+            {
+                icon: "img/ai/sos.webp",
+                title: "SnapOrSplash",
+                subtitle: "Reinventing Hole in the Wall game via ML",
+                year: "2024",
+                role: "MacOS Developer (solo)",
+                repo: "https://github.com/baduthutan/Snap-or-Splash",
+                design: "https://www.figma.com/design/JWissRS7jfA9whIt56mMNa/Snap!?node-id=0-1&t=Z1DWxZTHsMcMh9Aa-1",
+                demo: "",         
+                publication: "https://medium.com/@vinchenamigo/snap-or-splash-bringing-the-nostalgic-hole-in-the-wall-gameshow-to-your-mac-using-machine-learning-26838ddc15bf", 
+                description: "Snap or Splash is an interactive game inspired by 'Hole in the Wall,' where players mimic predefined poses that are evaluated for accuracy by a machine learning model. Key to the challenge was achieving precise real-time pose detection on MacOS. We used AVFoundation for camera management, Vision API for pose capture, and CoreML for integrating the Human Pose Classifier Model. CreateML streamlined model training and testing, ensuring a smooth user experience.",
+                poster: "img/p/sos.webp",
+                code: "Swift, SwiftUI",
+                stack: "CoreML, Vision, AVFoundation",
+                tool: "Xcode, Create ML, Github",
+                architecture: "MVC design pattern,<br>SwiftUI frontend,<br>No Storage",
+                features: "Camera shot countdown, pose overlay, detect user pose, result score processing by model confidence"
+            },
+            {
+                icon: "img/ai/tc.webp",
+                title: "TypeCaster",
+                subtitle: "The Ultimate Spell Typing Battle RPG",
+                year: "2024",
+                role: "MacOS Developer, Asset Design",
+                repo: "https://github.com/TessyJr/TypeCaster",
+                design: "",
+                demo: "https://youtu.be/rOKJyNzosGs",
+                publication: "https://www.linkedin.com/pulse/creating-pixel-art-character-aseprite-designing-riki-vincent-vincent-gc5c/?trackingId=jWznZ6fyLueNm%2FmGUTO%2Bg%3D",
+                description: "TypeCaster is a classic RPG game that elevates the bullet hell genre by combining intense action with precise typing mechanics. In this game, players face a continuous barrage of attacks and must skillfully type magical spells to launch counterattacks while avoiding damage. The core challenge lies in managing both evasion and offense simultaneously. As in real spell casting, player can't revert back misspelled words and will be stunned. By blending these elements, TypeCaster delivers a unique gameplay experience where quick reflexes and precise typing are essential for survival and success.",
+                poster: "img/p/tc.webp",
+                code: "Swift, SpriteKit",
+                stack: "SKTiles, Cocoa, AVFoundation",
+                tool: "Xcode, Aseprite, Github",
+                architecture: "MVC design pattern,<br>SKScene frontend,<br>No Storage",
+                features: "Type to cast spell mechanism, tutorial scene, exploration scene, battle scene, interactive objects, unlock-able spell"
+            },
+            {
+                icon: "img/ai/ooar.webp",
+                title: "OddOfficeAR",
+                subtitle: "Escape plan from the unusual scouts room",
+                year: "2024",
+                role: "iOS AR Game Developer",
+                repo: "https://github.com/baduthutan/oDD-oFFicE-AR",
+                design: "",
+                demo: "https://youtu.be/_AMkWcJwKf0?si=x77LycKX27jVB3uy",         
+                publication: "https://medium.com/@vinchenamigo/exploration-on-iphones-system-features-and-outputs-through-oddofficear-a-case-study-aac37caeff98", 
+                description: "OddOffice is a game designed to amaze players with its unique and challenging puzzles. In the game, players are positioned as they are attending a job recruitment for a security force. To pass the test and escape the room, they must solve complex challenges using scout codes. The innovative gameplay incorporates AR elements, including haptic feedback for Morse code, brightness-dependent Pig Pen codes, and Semaphore codes that shift between dark and light modes. These features create a multifaceted experience that enhances problem-solving skills and keeps players engaged.",
+                poster: "img/p/ooar.webp",
+                code: "Swift, SwiftUI",
+                stack: "RealityKit, ARKit, Speech, AVFoundation",
+                tool: "Xcode, Reality Composer, Github",
+                architecture: "MVC design pattern,<br>SwiftUI frontend,<br>No Storage",
+                features: "Coaching overlay, vibrating morse code, screen brightness detector, light-dark mode detector, speech recognition, change scene on proximity"
+            },
+            {
+                icon: "img/ai/lsar.webp",
+                title: "LonelyScape",
+                subtitle: "Solve the riddles, escape the loneliness",
+                year: "2023",
+                role: "iOS AR Game Developer",
+                repo: "https://github.com/baduthutan/LonelyScapeAR",
+                design: "",
+                demo: "https://www.youtube.com/watch?v=yoGGu5_WwzE",         
+                publication: "https://ieeexplore.ieee.org/abstract/document/10277954", 
+                description: "LonelyScape is an innovative augmented reality escape room game that merges virtual elements in a dynamic 3D environment with our real world. The objective of LonelyScape is to provide a captivating and interactive gaming experience that challenges players' problem-solving skills by gathering clues from English letter riddles and interactions with the objects on the scene. LonelyScape represents a promising evolution in the escape room genre, combining physical and virtual challenges to deliver an entertaining and immersive experience.",
+                poster: "img/p/lsar.webp",
+                code: "Swift, SwiftUI",
+                stack: "RealityKit, ARKit, ARKit, AVKit",
+                tool: "Xcode, Reality Composer, Github",
+                architecture: "MVC design pattern,<br>SwiftUI frontend,<br>No Storage",
+                features: "Coaching overlay, audio play on tap,  intractable objects, add overlay on interaction and proximity"
+            },
+        ];
+
+        const leftColumn = document.getElementById('leftColumn');
+        const scrollContainer = document.getElementById('scrollContainer');
+        const projectSections = scrollContainer.getElementsByClassName('project-section');
+
+        function updateLeftColumn(index) {
+            // Ensure the index is within bounds
+            if (index < 0 || index >= projects.length) return;
+
+            const project = projects[index];
+            leftColumn.innerHTML = `
+                <div class="flex items-center gap-4 lg:block mb-4">
+                    <img src="${project.icon}" alt="Project Icon" class="w-16 h-16 md:w-20 md:h-20 rounded-2xl shadow-lg shadow-[#8893B3]/50" style="filter: drop-shadow(0 0.5rem 2rem rgba(136, 147, 179, 0.5));">
+                    <div class="lg:mt-4">
+                        <h2 class="text-[#9B79E5] app-title leading-tight">${project.title}:</h2>
+                        <p class="text-[#1A2A44] app-subtitle leading-tight mt-0.5">${project.subtitle}</p>
+                    </div>
+                </div>
+                <hr class="my-6 border-2 border-[#9B79E5]">
+                <div class="grid grid-cols-3 gap-x-8 gap-y-4 sm:grid-cols-5 lg:block lg:space-y-8 mt-6">
+                    <div>
+                        <h3 class="text-[#1A2A44] desc-header">Year</h3>
+                        <p class="text-[#9B79E5] desc-content tracking-tight">${project.year}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-[#1A2A44] desc-header">Role/Position</h3>
+                        <p class="text-[#9B79E5] desc-content tracking-tight">${project.role}</p>
+                    </div>
+                    <div>
+                        <h3 class="text-[#1A2A44] desc-header">Repository</h3>
+                        <a href="${project.repo}" target="_blank" class="text-[#9B79E5] desc-content tracking-tight underline block break-words hover:opacity-75">
+                            <span class="block lg:hidden">Click here</span>
+                            <span class="hidden lg:block">${project.repo}</span>
+                        </a>
+                    </div>
+                    ${project.design ? `
+                    <div>
+                        <h3 class="text-[#1A2A44] desc-header">Design Link</h3>
+                        <a href="${project.design}" target="_blank" class="text-[#9B79E5] desc-content tracking-tight underline block break-words hover:opacity-75">
+                            <span class="block lg:hidden">Click here</span>
+                            <span class="hidden lg:block">${project.design}</span>
+                        </a>
+                    </div>` : ''}
+                    ${project.demo ? `
+                    <div>
+                        <h3 class="text-[#1A2A44] desc-header">Game Demo</h3>
+                        <a href="${project.demo}" target="_blank" class="text-[#9B79E5] desc-content tracking-tight underline block break-words hover:opacity-75">
+                            <span class="block lg:hidden">Click here</span>
+                            <span class="hidden lg:block">${project.demo}</span>
+                        </a>
+                    </div>` : ''}
+                    <div>
+                        <h3 class="text-[#1A2A44] desc-header">Publication</h3>
+                        <a href="${project.publication}" target="_blank" class="text-[#9B79E5] desc-content tracking-tight underline block break-words hover:opacity-75">
+                            <span class="block lg:hidden">Click here</span>
+                            <span class="hidden lg:block">${project.publication}</span>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize with the first project
+        let currentProject = 0;
+        updateLeftColumn(currentProject);
+
+        // Function to determine the current project based on scroll position
+        function determineCurrentProject() {
+            let newProject = currentProject;
+            for (let i = 0; i < projectSections.length; i++) {
+                const rect = projectSections[i].getBoundingClientRect();
+                // Check if the top of the section is within the top 50% of the viewport
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    newProject = i;
+                    break;
+                }
+            }
+            return newProject;
+        }
+
+        // Add scroll event listener with throttling for performance
+        let isThrottled = false;
+        scrollContainer.addEventListener('scroll', () => {
+            if (!isThrottled) {
+                window.requestAnimationFrame(() => {
+                    const newProject = determineCurrentProject();
+                    if (newProject !== currentProject) {
+                        // Fade out the current content
+                        leftColumn.style.opacity = '0';
+                        // After the transition, update the content and fade back in
+                        setTimeout(() => {
+                            updateLeftColumn(newProject);
+                            leftColumn.style.opacity = '1';
+                        }, 300); // Duration matches the CSS transition
+                        currentProject = newProject;
+                    }
+                    isThrottled = false;
+                });
+                isThrottled = true;
+            }
+        });
+
+        function createProjectSection(project) {
+            return `
+                <div class="project-section h-full snap-start flex flex-col justify-between pb-5 lg:pb-20" id="${project.title}">
+                <!-- Project Description -->
+                <div class="mb-4 bg-[#EAEAEA] rounded-[2.5rem] p-6 lg:mb-8">
+                    <h3 class="text-[#1A2A44] desc-header mb-2">Project Description</h3>
+                    <p class="text-[#838587] desc-content leading-tight tracking-tight">${project.description}</p>
+                </div>
+
+                <!-- Image Section -->
+                <div class="mb-4 bg-white rounded-[2.5rem] shadow lg:mb-8 flex-grow overflow-hidden">
+                    <img src="${project.poster}" alt="${project.title} Screenshot" class="w-full h-full object-cover object-center rounded-[2.5rem] border-4 border-black/50">
+                </div>
+
+                <!-- Tech Stack Section -->
+                <div class="bg-[#AB88F6] rounded-[2.5rem] p-6 grid grid-cols-4 gap-y-4 gap-x-8 sm:place-items-center sm:grid-cols-7 sm:px-[5vw] text-white sm:divide-x-2 sm:divide-white/75">
+                    <div class="col-span-2">
+                    <h4 class="text-[#1A2A44] desc-header">Tech Stack</h4>
+                    <p class="text-white desc-content leading-4 tracking-tight"><i class="fa-solid fa-code"></i> ${project.code}<br><i class="fa-solid fa-layer-group"></i>  ${project.stack}<br><i class="fa-solid fa-hammer"></i> ${project.tool}</p>
+                    </div>
+                    <div class="col-span-2 sm:pl-5">
+                    <h4 class="text-[#1A2A44] desc-header">Architecture</h4>
+                    <p class="text-white desc-content leading-4 tracking-tight">${project.architecture}</p>
+                    </div> 
+                    <div class="col-span-4 sm:col-span-3 sm:pl-5">
+                    <h4 class="text-[#1A2A44] desc-header">Features</h4>
+                    <p class="text-white desc-content leading-4 tracking-tight">${project.features}</p>
+                    </div>
+                </div>
+                </div>
+            `;
+        }
+
+        
+        function populateProjects() {
+            scrollContainer.innerHTML = projects.map(createProjectSection).join('');
+        }
+
+        populateProjects();
+       
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const wrapper = document.querySelector('.scrolling-wrapper');
+            const img = wrapper.querySelector('img');
+            
+            img.addEventListener('load', () => {
+                wrapper.style.width = `${img.width * 2}px`;
+            });
+        });
+    </script>
+    
+</body>
+</html>
