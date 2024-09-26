@@ -50,6 +50,11 @@
             scrollbar-width: none; 
         }  
 
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
         .left-column {
             transition: opacity 0.3s ease-in-out;
         }
@@ -92,7 +97,7 @@
     </style>
 </head>
 <body>
-    <main class="max-w-7xl mx-auto bg-white scroll-container">
+    <main class="max-w-7xl mx-auto bg-white sm:scroll-container">
         <!-- Landing Section -->
         <section class="h-screen grid grid-rows-3 lg:grid-rows-2 gap-y-4 p-5 lg:gap-y-8 lg:p-10 snap-center">
             <div class="bg-[#EFE8FF] rounded-[2.5rem] flex items-center justify-center col-span-2">
