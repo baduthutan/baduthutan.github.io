@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinchen Amigo</title>
+    <link rel="icon" href="img/vinchen_logo.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -109,14 +110,22 @@
                     <div class="bg-none border-4 border-black rounded-[2.5rem] flex flex-col justify-end overflow-hidden">
                         <img src="img/mypic.webp" alt="vinchen's picture" class="max-h-full w-auto object-contain">
                     </div>                    
-                    <div class="bg-[url('img/neon.webp')] rounded-[2.5rem] bg-no-repeat bg-cover bg-center"></div>
+                    <div class="relative rounded-[2.5rem] overflow-hidden">
+                        <img src="img/neon.webp" alt="" class="inset-0 w-full h-full rounded-[2.5rem] transition-all duration-500 z-0" id="grids">
+                        <a href="Portfolio.pdf" download
+                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/50 backdrop-blur-md p-2 px-4 lg:p-3 lg:px-6 border-2 border-white-900 transition-all duration-300 hover:bg-white/70 hover:scale-105" 
+                            id="download-btn">
+                            <p class="poppins text-grey-700 font-semibold text-[2.3vw] lg:text-[1.8vh] whitespace-nowrap"><i class="fa-solid fa-download mr-1"></i> My Portfolio</p>
+                        </a>
+                    </div>
+                    
                 </div>    
             </div>
         </section>
 
         <!-- Table of Contents -->
         <section class="h-screen p-5 lg:p-10 snap-center">
-            <div class="h-full bg-[#EFE8FF] rounded-[2.5rem] flex items-center justify-center p-10 sm:p-20">
+            <div class="h-full bg-[#EFE8FF] rounded-[2.5rem] flex items-center  justify-center p-10 sm:p-20">
                 <div class="h-full flex flex-col items-start justify-center">
                     <img src="img/toc.webp" alt="table of contents" class="h-8 sm:h-12 md:h-16 lg:h-20 img-fluid mb-10">
                     <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-16 text-[#1A2A44] overflow-scroll" style="scrollbar-width: none;">
@@ -163,7 +172,7 @@
         </section>
     
         <!-- Main section -->
-        <section class="h-screen flex flex-col lg:grid lg:grid-cols-11 gap-4 px-5 pt-5 lg:gap-16 lg:px-10 lg:pt-10 snap-center overflow-hidden">
+        <section class="h-screen flex flex-col lg:grid lg:grid-cols-11 gap-4 px-5 pt-5 lg:gap-16 lg:px-10 lg:pt-10 snap-always snap-center overflow-hidden">
             <!-- Left Column -->
             <div id="leftColumn" class="px-4 lg:py-4 col-span-11 lg:col-span-3 2xl:col-span-2 left-column flex-shrink-0">
                 <!-- Left column content -->
@@ -220,7 +229,8 @@
             </div>   
         </section>
     </main>
-    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // Define your projects with all necessary data
         const projects = [
@@ -235,6 +245,7 @@
                 demo: "",         
                 publication: "https://medium.com/@vinchenamigo/eyesistant-an-attempt-on-building-inclusivity-for-partially-colorblind-using-uikit-d8365329bb07", 
                 description: "This project aims to assist partially color-blind individuals in overcoming the challenges they face when choosing clothing colors. Many of these individuals struggle with concerns about whether the colors they select suit them personally and are socially acceptable. They often rely on other people's eye for color validation, which can be inconvenient and sometimes embarrassing. The solution is a mobile application that leverages personal color theory to provide personalized color recommendations. By offering tailored guidance, the app empowers users to make confident fashion choices independently.",
+                shortdesc: "A mobile application that leverages personal color theory to provide personalized color recommendations by offering tailored guidance, addressing the problem of color-blind individuals when choosing clothing colors",
                 poster: "img/p/es.webp",
                 code: "Swift, UIKit",
                 stack: "Vision, AVFoundation, CoreImage",
@@ -253,6 +264,7 @@
                 demo: "",         
                 publication: "https://medium.com/@vinchenamigo/my-experience-as-a-tech-lead-on-sunny-side-project-reimagining-weather-app-for-commuters-6186c8535061", 
                 description: "The project Sunny Side reimagines traditional weather apps by focusing on the specific needs of homemakers engaged in outdoor activities. The challenge identified through research was that existing weather apps cover large areas, making it difficult to determine weather conditions for a specific place. The solution is a weather app that allows users to search for precise locations, receive recommendations on what to prepare for those conditions, and pin the location for easy access on the homepage. It utilizes SwiftUI, WeatherKit, and reverse geolocation to enhance user convenience.",
+                shortdesc: "While existing weather apps cover large areas, weather app that allows users to search for precise locations, receive recommendations on what to prepare for those conditions, and pin the location on the homepage.",
                 poster: "img/p/ss.webp",
                 code: "Swift, SwiftUI",
                 stack: "WeatherKit, CoreLocation, MapKit",
@@ -271,6 +283,7 @@
                 demo: "",         
                 publication: "https://medium.com/@vinchenamigo/building-swiftconnect-how-a-beginner-used-mvvm-for-an-ml-powered-license-plate-scanner-9a8d0f531b9d", 
                 description: "SiCon (Swift Connect), an application designed to assist security personnel in efficiently managing motorcycle parking at GOP 9. The app uses machine learning to scan license plates and quickly retrieve the owner's information—such as name, workplace, front desk number, and license number—from a database. This significantly reduces the time it takes for security to contact the owner of a vehicle that's parked improperly, eliminating the need to go through building management.",
+                shortdesc: "An application designed to assist security personnel in efficiently managing motorcycle parking at GOP 9. The app uses machine learning to scan license plates and quickly retrieve the owner's information.",
                 poster: "img/p/sc.webp",
                 code: "Swift, SwiftUI",
                 stack: "SwiftData, VisionKit, WhatsApp API",
@@ -288,7 +301,8 @@
                 design: "https://www.figma.com/design/JWissRS7jfA9whIt56mMNa/Snap!?node-id=0-1&t=Z1DWxZTHsMcMh9Aa-1",
                 demo: "",         
                 publication: "https://medium.com/@vinchenamigo/snap-or-splash-bringing-the-nostalgic-hole-in-the-wall-gameshow-to-your-mac-using-machine-learning-26838ddc15bf", 
-                description: "Snap or Splash is an interactive game inspired by 'Hole in the Wall,' where players mimic predefined poses that are evaluated for accuracy by a machine learning model. Key to the challenge was achieving precise real-time pose detection on MacOS. We used AVFoundation for camera management, Vision API for pose capture, and CoreML for integrating the Human Pose Classifier Model. CreateML streamlined model training and testing, ensuring a smooth user experience.",
+                description: "Snap or Splash is an interactive game inspired by 'Hole in the Wall,' where players mimic predefined poses that are evaluated for accuracy by a machine learning model. Key to the challenge was achieving precise real-time pose detection on MacOS. We used AVFoundation for camera management, Vision API for pose capture, and CoreML for integrating the Human Pose Classifier Model. With CreateML streamlined model training and testing, we ensure a smooth user experience.",
+                shortdesc: "Snap or Splash is an interactive game inspired by 'Hole in the Wall,' where players mimic predefined poses that are evaluated for accuracy by a machine learning model. With CreateML model training, we ensure a smooth UX.",
                 poster: "img/p/sos.webp",
                 code: "Swift, SwiftUI",
                 stack: "CoreML, Vision, AVFoundation",
@@ -307,6 +321,7 @@
                 demo: "https://youtu.be/rOKJyNzosGs",
                 publication: "https://www.linkedin.com/pulse/creating-pixel-art-character-aseprite-designing-riki-vincent-vincent-gc5c/?trackingId=jWznZ6fyLueNm%2FmGUTO%2Bg%3D",
                 description: "TypeCaster is a classic RPG game that elevates the bullet hell genre by combining intense action with precise typing mechanics. In this game, players face a continuous barrage of attacks and must skillfully type magical spells to launch counterattacks while avoiding damage. The core challenge lies in managing both evasion and offense simultaneously. As in real spell casting, player can't revert back misspelled words and will be stunned. By blending these elements, TypeCaster delivers a unique gameplay experience where quick reflexes and precise typing are essential for survival and success.",
+                shortdesc: "A classic RPG bullet hell game that combines intense action with precise typing mechanics, facing players a continuous barrage of attacks and must skillfully type magical spells to launch counterattacks while avoiding damage.",
                 poster: "img/p/tc.webp",
                 code: "Swift, SpriteKit",
                 stack: "SKTiles, Cocoa, AVFoundation",
@@ -325,6 +340,7 @@
                 demo: "https://youtu.be/_AMkWcJwKf0?si=x77LycKX27jVB3uy",         
                 publication: "https://medium.com/@vinchenamigo/exploration-on-iphones-system-features-and-outputs-through-oddofficear-a-case-study-aac37caeff98", 
                 description: "OddOffice is a game designed to amaze players with its unique and challenging puzzles. In the game, players are positioned as they are attending a job recruitment for a security force. To pass the test and escape the room, they must solve complex challenges using scout codes. The innovative gameplay incorporates AR elements, including haptic feedback for Morse code, brightness-dependent Pig Pen codes, and Semaphore codes that shift between dark and light modes. These features create a multifaceted experience that enhances problem-solving skills and keeps players engaged.",
+                shortdesc: "A game designed to amaze players with unique and challenging puzzles that incorporates AR elements, haptic feedback, system feature and outputs, creating a unique experience that enhances problem-solving skills and keeps players engaged",
                 poster: "img/p/ooar.webp",
                 code: "Swift, SwiftUI",
                 stack: "RealityKit, ARKit, Speech, AVFoundation",
@@ -343,6 +359,7 @@
                 demo: "https://www.youtube.com/watch?v=yoGGu5_WwzE",         
                 publication: "https://ieeexplore.ieee.org/abstract/document/10277954", 
                 description: "LonelyScape is an innovative augmented reality escape room game that merges virtual elements in a dynamic 3D environment with our real world. The objective of LonelyScape is to provide a captivating and interactive gaming experience that challenges players' problem-solving skills by gathering clues from English letter riddles and interactions with the objects on the scene. LonelyScape represents a promising evolution in the escape room genre, combining physical and virtual challenges to deliver an entertaining and immersive experience.",
+                shortdesc: "LonelyScape is an innovative augmented reality escape room game provide an immersive gaming experience that challenges players' problem-solving skills by gathering clues from riddles and interactions with the objects on the scene.",
                 poster: "img/p/lsar.webp",
                 code: "Swift, SwiftUI",
                 stack: "RealityKit, ARKit, ARKit, AVKit",
@@ -501,6 +518,23 @@
                 wrapper.style.width = `${img.width * 2}px`;
             });
         });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const downloadBtn = document.getElementById("download-btn");
+            const grids = document.getElementById("grids");
+
+            downloadBtn.addEventListener("mouseenter", function() {
+                grids.style.transform = "scale(1.6)";
+                grids.style.filter = "blur(2px)";
+            });
+
+            downloadBtn.addEventListener("mouseleave", function() {
+                grids.style.transform = "scale(1)";
+                grids.style.filter = "blur(0)";
+            });
+        });
+
+
     </script>
     
 </body>
