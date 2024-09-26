@@ -476,7 +476,10 @@
                 <!-- Project Description -->
                 <div class="mb-4 bg-[#EAEAEA] rounded-[2.5rem] p-6 lg:mb-8">
                     <h3 class="text-[#1A2A44] desc-header mb-2">Project Description</h3>
-                    <p class="text-[#838587] desc-content leading-tight tracking-tight">${project.description}</p>
+                    <p class="text-[#838587] desc-content leading-tight tracking-tight">
+                        <span class="block sm:hidden">${project.shortdesc}</span>
+                        <span class="hidden sm:block">${project.description}</span>
+                    </p>
                 </div>
 
                 <!-- Image Section -->
