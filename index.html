@@ -96,27 +96,36 @@
 
     </style>
 </head>
-<body>
-    <main class="max-w-7xl mx-auto bg-white scroll-container">
+<body class="bg-white dark:bg-[#202020]">
+    <main class="max-w-7xl mx-auto scroll-container">
         <!-- Landing Section -->
         <section class="h-screen grid grid-rows-3 lg:grid-rows-2 gap-y-4 p-5 lg:gap-y-8 lg:p-10 snap-center">
-            <div class="bg-[#EFE8FF] rounded-[2.5rem] flex items-center justify-center col-span-2">
-                <img src="img/vinchenamigo.webp" alt="vinchen amigo logo" class="w-[60vw] sm:w-auto sm:h-12 lg:h-16 object-contain">
+            <div class="bg-[#EFE8FF] dark:bg-[#9B79E5] dark:bg-opacity-50 rounded-[2.5rem] flex items-center justify-center col-span-2 dark:border-4 dark:border-[#9B79E5]">
+                <img src="img/vinchenamigo.webp" alt="vinchen amigo logo" class="w-[60vw] sm:w-auto sm:h-12 lg:h-16 object-contain dark:hidden">
+                <img src="img/vinchenamigo_dark.webp" alt="vinchen amigo logo" class="w-[60vw] sm:w-auto sm:h-12 lg:h-16 object-contain hidden dark:block">
             </div>
 
-            <div class="grid grid-rows-4 grid-cols-1 lg:grid-rows-1 lg:grid-cols-11 gap-4 lg:gap-8 row-span-2 lg:row-span-1">
+            <div class="grid grid-rows-4 grid-cols-1 lg:grid-rows-1 lg:grid-cols-11 gap-4 lg:gap-8 row-span-2 lg:row-span-1 ">
 
-                <div class="row-span-3 col-span-1 lg:row-span-1 lg:col-span-8 bg-gradient-to-br from-[#4A4A4A] to-[#262626] rounded-[2.5rem] px-6 sm:px-12 flex flex-col justify-center">
-                    <h1 class="poppins text-white font-semibold text-[6.5vw]/normal sm:text-[4.5vw]/relaxed lg:text-[5vh]/relaxed mb-4 lg:mb-9">Dedicated Programmer, Passionate Developer</h1>
-                    <p class="poppins text-white font-medium text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh]">I am currently enrolled in the Apple Developer Academy and bring two years of experience as a freelance developer. My expertise lies in iOS development, with strong proficiency in Swift, SwiftUI, and UIKit. Additionally, I have hands-on experience with JavaScript, PHP, and Laravel, and am passionate about creating innovative solutions across multiple platforms.</p>
-                </div>
+                <div class="relative row-span-3 col-span-1 lg:row-span-1 lg:col-span-8 bg-gradient-to-r from-[#9B79E5] to-[#BFEE61] rounded-[2.5rem] p-0 dark:p-[4px]">
+                    <div class="bg-gradient-to-br from-[#4A4A4A] to-[#262626] rounded-[2.5rem] h-full w-full px-6 sm:px-12 flex flex-col justify-center">
+                      <h1 class="poppins text-white font-semibold text-[6.5vw]/normal sm:text-[4.5vw]/relaxed lg:text-[5vh]/relaxed mb-4 lg:mb-9">
+                        Dedicated Programmer, Passionate Developer
+                      </h1>
+                      <p class="poppins text-white font-medium text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh]">
+                        I am currently enrolled in the Apple Developer Academy and bring two years of experience as a freelance developer. My expertise lies in iOS development, with strong proficiency in Swift, SwiftUI, and UIKit. Additionally, I have hands-on experience with JavaScript, PHP, and Laravel, and am passionate about creating innovative solutions across multiple platforms.
+                      </p>
+                    </div>
+                  </div>
+                  
 
                 <div class="grid grid-cols-2 row-span-1 col-span-1 lg:row-span-1 lg:col-span-3  lg:grid-cols-1 lg:grid-rows-2 gap-4 lg:gap-8">
-                    <div class="bg-none border-4 border-black rounded-[2.5rem] flex flex-col justify-end overflow-hidden">
+                    <div class="bg-none border-4 border-black dark:border-[#BFEE61] dark:bg-[#BFEE61]/50 rounded-[2.5rem] flex flex-col justify-end overflow-hidden">
                         <img src="img/mypic.webp" alt="vinchen's picture" class="max-h-full w-auto object-contain">
                     </div>                    
-                    <div class="relative rounded-[2.5rem] overflow-hidden">
-                        <img src="img/neon.webp" alt="" class="inset-0 w-full h-full rounded-[2.5rem] transition-all duration-500 z-0" id="grids">
+                    <div class="relative rounded-[2.5rem] overflow-hidden dark:border-4 bg-[#BFEE61] dark:bg-opacity-50 dark:border-[#BFEE61]">
+                        <img src="img/neon.webp" alt="" class="grids inset-0 w-full h-full transition-all duration-500 z-0 dark:opacity-75">
+                        <!-- <img src="img/neon_dark.webp" alt="" class="grids inset-0 w-full h-full transition-all duration-500 z-0 opacity-75 hidden dark:block"> -->
                         <a href="Portfolio.pdf" download
                             class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/50 backdrop-blur-md p-2 px-4 lg:p-3 lg:px-6 border-2 border-white-900 transition-all duration-300 hover:bg-white/70 hover:scale-105" 
                             id="download-btn">
@@ -130,48 +139,65 @@
 
         <!-- Table of Contents -->
         <section class="h-screen p-5 lg:p-10 snap-center">
-            <div class="h-full bg-[#EFE8FF] rounded-[2.5rem] flex items-center  justify-center p-10 sm:p-20">
-                <div class="h-full flex flex-col items-start justify-center">
-                    <img src="img/toc.webp" alt="table of contents" class="h-8 sm:h-12 md:h-16 lg:h-20 img-fluid mb-10">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-16 text-[#1A2A44] overflow-scroll" style="scrollbar-width: none;">
-                        <div>
-                            <div class="border-b-4 border-[#1A2A44] pb-6">
-                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#Eyesistant">Eyesistant: Fashion Color Guide for Partial Colorblind</a>
-                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Develop/iOS App/ADA C7/2024</p>
+            <div class="h-full bg-gradient-to-r from-[#9B79E5] to-[#BFEE61] rounded-[2.5rem] p-0 dark:p-[4px]">
+                <div class="h-full bg-[#EFE8FF] dark:bg-[#202020] rounded-[2.5rem] flex items-center  justify-center p-10 sm:p-20">
+                    <div class="h-full flex flex-col items-start justify-center">
+                        <img src="img/toc.webp" alt="table of contents" class="h-8 sm:h-12 md:h-16 lg:h-20 img-fluid mb-10 sm:mb-14 dark:hidden">
+                        <img src="img/toc_dark.webp" alt="table of contents" class="h-8 sm:h-12 md:h-16 lg:h-20 img-fluid mb-10 sm:mb-14 hidden dark:block">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-16 text-[#1A2A44] overflow-scroll dark:text-white" style="scrollbar-width: none;">
+                            <div>
+                                <div class="bg-[#1A2A44] dark:bg-gradient-to-r dark:from-[#9B79E5] dark:to-[#BFEE61] pb-[4px]">
+                                    <div class="h-full bg-[#EFE8FF] dark:bg-[#202020] pb-6">
+                                        <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#Eyesistant">Eyesistant: Fashion Color Guide for Partial Colorblind</a>
+                                        <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Develop/iOS App/ADA C7/2024</p>
+                                    </div>
+                                </div>
+                                <div class="bg-[#1A2A44] dark:bg-gradient-to-r dark:from-[#9B79E5] dark:to-[#BFEE61] pb-[4px]">
+                                    <div class="h-full bg-[#EFE8FF] dark:bg-[#202020] py-6">
+                                        <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#SunnySide">Sunny Side: Reimagining Weather app for Commuters</a>
+                                        <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Develop/iOS App/ADA C7/2024</p>
+                                    </div>
+                                </div>
+                                <div class="bg-[#1A2A44] dark:bg-gradient-to-r dark:from-[#9B79E5] dark:to-[#BFEE61] pb-[4px]">
+                                    <div class="h-full bg-[#EFE8FF] dark:bg-[#202020] py-6">
+                                        <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#SiCon">SiCon: ML Powered License Plate Scanner </a>
+                                        <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/iOS App/ADA C7/2024</p>
+                                    </div>
+                                </div>
+                                <div class="bg-[#1A2A44] dark:bg-gradient-to-r dark:from-[#9B79E5] dark:to-[#BFEE61] pb-[4px] sm:pb-0">
+                                    <div class="h-full bg-[#EFE8FF] dark:bg-[#202020] py-6">
+                                        <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="SnapOrSplash">Snap or Splash: Reinventing Hole in the Wall game via ML</a>
+                                        <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/MacOS Game/ADA C7/2024</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="border-b-4 border-[#1A2A44] py-6">
-                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#SunnySide">Sunny Side: Reimagining Weather app for Commuters</a>
-                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Develop/iOS App/ADA C7/2024</p>
-                            </div>
-                            <div class="border-b-4 border-[#1A2A44] py-6">
-                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#SiCon">SiCon: ML Powered License Plate Scanner </a>
-                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/iOS App/ADA C7/2024</p>
-                            </div>
-                            <div class="border-b-4 border-[#1A2A44] sm:border-none py-6">
-                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="SnapOrSplash">Snap or Splash: Reinventing Hole in the Wall game via ML</a>
-                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/MacOS Game/ADA C7/2024</p>
+                            <div>
+                                <div class="bg-[#1A2A44] dark:bg-gradient-to-r dark:from-[#9B79E5] dark:to-[#BFEE61] pb-[4px]">
+                                    <div class="h-full bg-[#EFE8FF] dark:bg-[#202020] pb-6">
+                                        <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#TypeCaster">TypeCaster: The Ultimate Spell Typing Battle RPG</a>
+                                        <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/MacOS Game/ADA C7/2024</p>
+                                    </div>
+                                </div>
+                                <div class="bg-[#1A2A44] dark:bg-gradient-to-r dark:from-[#9B79E5] dark:to-[#BFEE61] pb-[4px]">
+                                    <div class="h-full bg-[#EFE8FF] dark:bg-[#202020] py-6">
+                                        <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#OddOfficeAR">OddOfficeAR: Escape plan from the unusual scouts room</a>
+                                        <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/iOS AR Game/ADA C7/2024</p>
+                                    </div>
+                                </div>
+                                <div class="bg-[#1A2A44] dark:bg-gradient-to-r dark:from-[#9B79E5] dark:to-[#BFEE61] pb-[4px]">
+                                    <div class="h-full bg-[#EFE8FF] dark:bg-[#202020] py-6">
+                                        <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#LonelyScape">LonelyScape: Solve the riddles, escape the loneliness</a>
+                                        <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/iOS AR Game/Academic/2023</p>
+                                    </div>
+                                </div>
+                                <div class="pt-6">
+                                    <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#Cleonima">Cleonima Invitation: Bringing your birthday invitation to life</a>
+                                    <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Develop/Website/Freelance/2023-present</p>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="border-b-4 border-[#1A2A44] py-6 sm:py-0 sm:pb-6">
-                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#TypeCaster">TypeCaster: The Ultimate Spell Typing Battle RPG</a>
-                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/MacOS Game/ADA C7/2024</p>
-                            </div>
-                            <div class="border-b-4 border-[#1A2A44] py-6">
-                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#OddOfficeAR">OddOfficeAR: Escape plan from the unusual scouts room</a>
-                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/iOS AR Game/ADA C7/2024</p>
-                            </div>
-                            <div class="border-b-4 border-[#1A2A44] py-6">
-                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#LonelyScape">LonelyScape: Solve the riddles, escape the loneliness</a>
-                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Design & Develop/iOS AR Game/Academic/2023</p>
-                            </div>
-                            <div class="pt-6">
-                                <a class="poppins font-semibold text-lg sm:text-xl lg:text-2xl pb-1 hover:underline" href="#Cleonima">Cleonima Invitation: Bringing your birthday invitation to life</a>
-                                <p class="poppins font-regular text-xs sm:text-sm lg:text-base">Develop/Website/Freelance/2023-present</p>
-                            </div>
-                        </div>
+                        <p class="poppins font-medium text-xs sm:text-sm text-[#9B79E5] dark:text-[#C9B0FF] mt-10">*ADA C7 = Apple Developer Academy@BINUS Program Cohort 7</p>
                     </div>
-                    <p class="poppins font-medium text-xs sm:text-sm text-[#9B79E5] mt-10">*ADA C7 = Apple Developer Academy@BINUS Program Cohort 7</p>
                 </div>
             </div>
         </section>
@@ -193,37 +219,46 @@
         <!-- Contact Section -->
         <section class="h-screen grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 gap-4 p-5 lg:gap-8 lg:p-10 snap-center">
             <!-- First grid cell: full width on small screens, half width on large screens -->
-            <div class="bg-gradient-to-br from-[#4A4A4A] to-[#262626] rounded-[2.5rem] relative overflow-hidden"> 
-                <div class="absolute z-1 right-0 bottom-0 -rotate-[15deg] opacity-75 w-[140vw] sm:w-[100vw] translate-x-[2rem] translate-y-[6vw] lg:w-[85vw] lg:translate-x-[4vw] lg:translate-y-[4vw] overflow-hidden">
-                    <div class="scrolling-wrapper">
-                        <img src="img/cleonima.webp" alt="cleonima catalog image">
-                        <img src="img/cleonima.webp" alt="cleonima catalog image">
+            <div class="relative p-0 dark:p-[4px] bg-gradient-to-t from-[#9B79E5] to-[#BFEE61] rounded-[2.5rem]">
+                <!-- Inner Content with Solid Background -->
+                <div class="h-full bg-gradient-to-t from-[#4A4A4A] from-10% to-[#262626] to-60% rounded-[2.5rem] p-6 sm:p-12 relative overflow-hidden"> 
+                    <!-- Scrollable Image Container -->
+                    <div class="absolute z-1 right-0 bottom-0 -rotate-[15deg] opacity-75 w-[140vw] sm:w-[100vw] translate-x-[2rem] translate-y-[6vw] lg:w-[85vw] lg:translate-x-[4vw] lg:translate-y-[4vw] overflow-hidden">
+                        <div class="scrolling-wrapper">
+                            <img src="img/cleonima.webp" alt="cleonima catalog image">
+                            <img src="img/cleonima.webp" alt="cleonima catalog image">
+                        </div>
+                    </div>
+              
+                    <!-- Text Content -->
+                    <div class="absolute z-2 h-full top-0 left-0 px-8 sm:px-12 py-12 lg:py-20 flex flex-col" id="Cleonima">
+                        <p class="poppins font-regular text-white uppercase mb-4 lg:mb-10 text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh]">i'm currently working with</p>
+                        <p class="poppins font-semibold text-white text-[6.5vw]/tight sm:text-[4.5vw]/tight lg:text-[6vh]/tight">Cleonima Invitations</p>
+                        <p class="poppins font-medium text-white mt-4 lg:mb-10 text-[3.3vw] sm:text-[2.5vw] lg:text-[2.3vh]">Bringing your sweet seventeen<br>birthday invitation to life</p>
+                        <div class="mt-auto bg-[#BFEE61] px-4 py-2 sm:px-5 sm:py-3 w-max rounded-[1.5rem]">
+                            <p class="poppins font-bold text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh] block mb-1">our catalog</p>
+                            <a href="https://bit.ly/cleonimacatalog" class="poppins font-regular underline text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh] block hover:opacity-50">https://bit.ly/cleonimacatalog</a>
+                        </div>                      
                     </div>
                 </div>
-                <div class="absolute z-2 h-full top-0 left-0 px-8 sm:px-12 py-12 lg:py-20 flex flex-col" id="Cleonima">
-                    <p class="poppins font-regular text-white uppercase mb-4 lg:mb-10 text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh]">i'm currently working with</p>
-                    <p class="poppins font-semibold text-white text-[6.5vw]/tight sm:text-[4.5vw]/tight lg:text-[6vh]/tight">Cleonima Invitations</p>
-                    <p class="poppins font-medium text-white mt-4 lg:mb-10 text-[3.3vw] sm:text-[2.5vw] lg:text-[2.3vh]">Bringing your sweet seventeen<br>birthday invitation to life</p>
-                    <div class="mt-auto bg-[#BFEE61] px-4 py-2 sm:px-5 sm:py-3 w-max rounded-[1.5rem]">
-                        <p class="poppins font-bold text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh] block mb-1">our catalog</p>
-                        <a href="https://bit.ly/cleonimacatalog" class="poppins font-regular underline text-[2.8vw] sm:text-[2vw] lg:text-[1.8vh] block hover:opacity-50">https://bit.ly/cleonimacatalog</a>
-                    </div>                      
-                </div>
-            </div>
+              </div>
+              
             
             <div class="grid grid-rows-4 gap-4 lg:grid-rows-5 lg:gap-8">
-                <div class="row-span-3 lg:row-span-4 bg-[#EAEAEA] rounded-[2.5rem] flex justify-center items-center p-8 sm:p-14 xl:p-16">
-                    <div class="h-full flex flex-col items-start justify-center">
-                        <p class="poppins font-semibold text-[#1A2A44] text-balance text-[6vw]/relaxed sm:text-[3.5vw]/relaxed lg:text-[4.3vh]/relaxed">
-                            “ So <span class="font-bold text-[#9B79E5]">don't worry about tomorrow</span>, for tomorrow will bring its own worries. <span class="font-bold text-[#9B79E5]">Today's trouble</span> is <span class="font-bold text-[#9B79E5]">enough for today.</span> “
-                        </p>
-                        <p class="poppins font-medium text-[#1A2A44] text-sm sm:text-md lg:text-lg mt-4 lg:mt-8"> Matthew 6-34 NLT</p>
+                <div class="row-span-3 lg:row-span-4 bg-gradient-to-t from-[#9B79E5] to-[#BFEE61] rounded-[2.5rem] p-0 dark:p-[4px]">
+                    <div class="h-full w-full bg-[#EAEAEA] dark:bg-[#202020] rounded-[2.5rem] flex justify-center items-center p-8 sm:p-14 xl:p-16">
+                        <div class="h-full w-full flex flex-col items-start justify-center">
+                            <p class="poppins font-semibold text-[#1A2A44] dark:text-[#FFFFFF] text-balance text-[6vw]/relaxed sm:text-[3.5vw]/relaxed lg:text-[4.3vh]/relaxed">
+                                “ So <span class="font-bold text-[#9B79E5] dark:text-[#C9B0FF]">don't worry about tomorrow</span>, for tomorrow will bring its own worries. <span class="font-bold text-[#9B79E5] dark:text-[#C9B0FF]">Today's trouble</span> is <span class="font-bold text-[#9B79E5] dark:text-[#C9B0FF]">enough for today.</span> “
+                            </p>
+                            <p class="poppins font-medium text-[#1A2A44] dark:text-[#FFFFFF] text-sm sm:text-md lg:text-lg mt-4 lg:mt-8"> Matthew 6-34 NLT</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="row-span-1 bg-[#AB88F6] rounded-[2.5rem] grid grid-cols-2 px-8 py-3 sm:py-4 md:px-[5vw] lg:py-8 lg:px-12 divide-white/75 divide-x-2">
+                <div class="row-span-1 bg-[#AB88F6] dark:bg-[#9B79E5]/50 dark:border-4 dark:border-[#9B79E5] rounded-[2.5rem] grid grid-cols-2 px-8 py-3 sm:py-4 md:px-[5vw] lg:py-8 lg:px-12 divide-white/75 divide-x-2">
                     <div class="flex flex-col justify-center">
-                        <h3 class="poppins text-sm sm:text-base lg:text-lg font-semibold text-[#1A2A44] mb-1">Contacts</h3>
+                        <h3 class="poppins text-sm sm:text-base lg:text-lg font-semibold text-[#1A2A44] dark:text-[#FFFFFF] mb-1">Contacts</h3>
                         <p class="poppins text-white font-regular text-[0.5rem] sm:text-xs lg:text-md tracking-tight"><i class="fa-brands fa-square-whatsapp"></i> (+62) 822 - 2777 - 4026</p>
                         <p class="poppins text-white font-regular text-[0.5rem] sm:text-xs lg:text-md tracking-tight"><i class="fa-solid fa-square-envelope"></i> vinchen996@gmail.com</p>
                     </div>
@@ -387,46 +422,46 @@
                 <div class="flex items-center gap-4 lg:block mb-4">
                     <img src="${project.icon}" alt="Project Icon" class="w-16 h-16 md:w-20 md:h-20 rounded-2xl shadow-lg shadow-[#8893B3]/50" style="filter: drop-shadow(0 0.5rem 2rem rgba(136, 147, 179, 0.5));">
                     <div class="lg:mt-4">
-                        <h2 class="text-[#9B79E5] app-title leading-tight">${project.title}:</h2>
-                        <p class="text-[#1A2A44] app-subtitle leading-tight mt-0.5">${project.subtitle}</p>
+                        <h2 class="text-[#9B79E5] dark:text-[#C9B0FF] app-title leading-tight">${project.title}:</h2>
+                        <p class="text-[#1A2A44] dark:text-[#FFFFFF] app-subtitle leading-tight mt-0.5">${project.subtitle}</p>
                     </div>
                 </div>
                 <hr class="my-6 border-2 border-[#9B79E5]">
                 <div class="grid grid-cols-3 gap-x-8 gap-y-4 sm:grid-cols-5 lg:block lg:space-y-8 mt-6">
                     <div>
-                        <h3 class="text-[#1A2A44] desc-header">Year</h3>
-                        <p class="text-[#9B79E5] desc-content tracking-tight">${project.year}</p>
+                        <h3 class="text-[#1A2A44] dark:text-[#FFFFFF] desc-header">Year</h3>
+                        <p class="text-[#9B79E5] dark:text-[#C9B0FF] desc-content tracking-tight">${project.year}</p>
                     </div>
                     <div>
-                        <h3 class="text-[#1A2A44] desc-header">Role/Position</h3>
-                        <p class="text-[#9B79E5] desc-content tracking-tight">${project.role}</p>
+                        <h3 class="text-[#1A2A44] dark:text-[#FFFFFF] desc-header">Role/Position</h3>
+                        <p class="text-[#9B79E5] dark:text-[#C9B0FF] desc-content tracking-tight">${project.role}</p>
                     </div>
                     <div>
-                        <h3 class="text-[#1A2A44] desc-header">Repository</h3>
-                        <a href="${project.repo}" target="_blank" class="text-[#9B79E5] desc-content tracking-tight underline block break-words hover:opacity-75">
+                        <h3 class="text-[#1A2A44] dark:text-[#FFFFFF] desc-header">Repository</h3>
+                        <a href="${project.repo}" target="_blank" class="text-[#9B79E5] dark:text-[#C9B0FF] desc-content tracking-tight underline block break-words hover:opacity-75">
                             <span class="block lg:hidden">Click here</span>
                             <span class="hidden lg:block">${project.repo}</span>
                         </a>
                     </div>
                     ${project.design ? `
                     <div>
-                        <h3 class="text-[#1A2A44] desc-header">Design Link</h3>
-                        <a href="${project.design}" target="_blank" class="text-[#9B79E5] desc-content tracking-tight underline block break-words hover:opacity-75">
+                        <h3 class="text-[#1A2A44] dark:text-[#FFFFFF] desc-header">Design Link</h3>
+                        <a href="${project.design}" target="_blank" class="text-[#9B79E5] dark:text-[#C9B0FF] desc-content tracking-tight underline block break-words hover:opacity-75">
                             <span class="block lg:hidden">Click here</span>
                             <span class="hidden lg:block">${project.design}</span>
                         </a>
                     </div>` : ''}
                     ${project.demo ? `
                     <div>
-                        <h3 class="text-[#1A2A44] desc-header">Game Demo</h3>
-                        <a href="${project.demo}" target="_blank" class="text-[#9B79E5] desc-content tracking-tight underline block break-words hover:opacity-75">
+                        <h3 class="text-[#1A2A44] dark:text-[#FFFFFF] desc-header">Game Demo</h3>
+                        <a href="${project.demo}" target="_blank" class="text-[#9B79E5] dark:text-[#C9B0FF] desc-content tracking-tight underline block break-words hover:opacity-75">
                             <span class="block lg:hidden">Click here</span>
                             <span class="hidden lg:block">${project.demo}</span>
                         </a>
                     </div>` : ''}
                     <div>
-                        <h3 class="text-[#1A2A44] desc-header">Publication</h3>
-                        <a href="${project.publication}" target="_blank" class="text-[#9B79E5] desc-content tracking-tight underline block break-words hover:opacity-75">
+                        <h3 class="text-[#1A2A44] dark:text-[#FFFFFF] desc-header">Publication</h3>
+                        <a href="${project.publication}" target="_blank" class="text-[#9B79E5] dark:text-[#C9B0FF] desc-content tracking-tight underline block break-words hover:opacity-75">
                             <span class="block lg:hidden">Click here</span>
                             <span class="hidden lg:block">${project.publication}</span>
                         </a>
@@ -479,31 +514,31 @@
             return `
                 <div class="project-section h-full snap-start flex flex-col justify-between pb-5 lg:pb-20" id="${project.title}">
                 <!-- Project Description -->
-                <div class="mb-4 bg-[#EAEAEA] rounded-[2.5rem] p-6 lg:mb-8">
-                    <h3 class="text-[#1A2A44] desc-header mb-2">Project Description</h3>
-                    <p class="text-[#838587] desc-content leading-tight tracking-tight">
+                <div class="mb-4 bg-[#EAEAEA] dark:bg-[#525252] dark:bg-opacity-50 dark:border-4 dark:border-[#525252] rounded-[2.5rem] p-6 lg:mb-8">
+                    <h3 class="text-[#1A2A44] dark:text-white desc-header mb-2">Project Description</h3>
+                    <p class="text-[#838587] dark:text-white desc-content leading-tight tracking-tight">
                         <span class="block sm:hidden">${project.shortdesc}</span>
                         <span class="hidden sm:block">${project.description}</span>
                     </p>
                 </div>
 
                 <!-- Image Section -->
-                <div class="mb-4 bg-white rounded-[2.5rem] shadow lg:mb-8 flex-grow overflow-hidden">
-                    <img src="${project.poster}" alt="${project.title} Screenshot" class="w-full h-full object-cover object-center rounded-[2.5rem] border-4 border-black/50">
+                <div class="mb-4 bg-white dark:bg-gradient-to-br dark:from-[#9B79E5] dark:to-[#BFEE61] rounded-[2.5rem] shadow lg:mb-8 flex-grow overflow-hidden">
+                    <img src="${project.poster}" alt="${project.title} Screenshot" class="w-full h-full object-cover object-center rounded-[2.5rem] border-4 border-black/50 dark:border-black/0">
                 </div>
 
                 <!-- Tech Stack Section -->
-                <div class="bg-[#AB88F6] rounded-[2.5rem] p-6 grid grid-cols-4 gap-y-4 gap-x-8 sm:place-items-center sm:grid-cols-7 sm:px-[5vw] text-white sm:divide-x-2 sm:divide-white/75">
+                <div class="bg-[#AB88F6] dark:bg-[#9B79E5]/50 dark:border-4 dark:border-[#9B79E5] rounded-[2.5rem] p-6 grid grid-cols-4 gap-y-4 gap-x-8 sm:place-items-center sm:grid-cols-7 sm:px-[5vw] text-white sm:divide-x-2 sm:divide-white/75">
                     <div class="col-span-2">
-                    <h4 class="text-[#1A2A44] desc-header">Tech Stack</h4>
+                    <h4 class="text-[#1A2A44] dark:text-[#FFFFFF] desc-header">Tech Stack</h4>
                     <p class="text-white desc-content leading-4 tracking-tight"><i class="fa-solid fa-code"></i> ${project.code}<br><i class="fa-solid fa-layer-group"></i>  ${project.stack}<br><i class="fa-solid fa-hammer"></i> ${project.tool}</p>
                     </div>
                     <div class="col-span-2 sm:pl-5">
-                    <h4 class="text-[#1A2A44] desc-header">Architecture</h4>
+                    <h4 class="text-[#1A2A44] dark:text-[#FFFFFF] desc-header">Architecture</h4>
                     <p class="text-white desc-content leading-4 tracking-tight">${project.architecture}</p>
                     </div> 
                     <div class="col-span-4 sm:col-span-3 sm:pl-5">
-                    <h4 class="text-[#1A2A44] desc-header">Features</h4>
+                    <h4 class="text-[#1A2A44] dark:text-[#FFFFFF] desc-header">Features</h4>
                     <p class="text-white desc-content leading-4 tracking-tight">${project.features}</p>
                     </div>
                 </div>
@@ -529,20 +564,22 @@
 
         document.addEventListener("DOMContentLoaded", function() {
             const downloadBtn = document.getElementById("download-btn");
-            const grids = document.getElementById("grids");
+            const grids = document.getElementsByClassName("grids");
 
             downloadBtn.addEventListener("mouseenter", function() {
-                grids.style.transform = "scale(1.6)";
-                grids.style.filter = "blur(2px)";
+                for (let i = 0; i < grids.length; i++) {
+                    grids[i].style.transform = "scale(1.6)";
+                    grids[i].style.filter = "blur(0.5px)";
+                }
             });
 
             downloadBtn.addEventListener("mouseleave", function() {
-                grids.style.transform = "scale(1)";
-                grids.style.filter = "blur(0)";
+                for (let i = 0; i < grids.length; i++) {
+                    grids[i].style.transform = "scale(1)";
+                    grids[i].style.filter = "blur(0)";
+                }
             });
         });
-
-
     </script>
     
 </body>
