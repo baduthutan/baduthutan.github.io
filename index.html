@@ -203,7 +203,7 @@
         </section>
     
         <!-- Main section -->
-        <section class="h-screen flex flex-col lg:grid lg:grid-cols-11 gap-4 px-5 pt-5 lg:gap-16 lg:px-10 lg:pt-10 snap-always snap-center overflow-hidden">
+        <section class="relative h-screen flex flex-col align-center justify-center lg:grid lg:grid-cols-11 gap-4 px-5 pt-5 lg:gap-16 lg:px-10 lg:pt-10 snap-always snap-center overflow-hidden">
             <!-- Left Column -->
             <div id="leftColumn" class="px-4 lg:py-4 col-span-11 lg:col-span-3 2xl:col-span-2 left-column flex-shrink-0">
                 <!-- Left column content -->
@@ -211,11 +211,17 @@
         
             <!-- Scroll Container -->
             <div id="scrollContainer" class="col-span-11 lg:col-span-8 2xl:col-span-9 flex-grow scroll-container">
-                <!-- Project section goes here -->
+                <!-- Project sections will be dynamically inserted here -->
             </div>
+        
+            <!-- Pagination Container (inside the section, absolutely positioned) -->
+            <div id="paginationContainer" class="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-2">
+                <!-- Pagination dots will be dynamically inserted here -->
+            </div>
+            
         </section>
         
-    
+
         <!-- Contact Section -->
         <section class="h-screen grid grid-rows-2 grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 gap-4 p-5 lg:gap-8 lg:p-10 snap-center">
             <!-- First grid cell: full width on small screens, half width on large screens -->
@@ -411,6 +417,7 @@
 
         const leftColumn = document.getElementById('leftColumn');
         const scrollContainer = document.getElementById('scrollContainer');
+        const paginationContainer = document.getElementById('paginationContainer');
         const projectSections = scrollContainer.getElementsByClassName('project-section');
 
         function updateLeftColumn(index) {
@@ -546,12 +553,97 @@
             `;
         }
 
-        
+        function createPaginationDots(projects) {
+            return `
+                <div class="pagination-dots ml-4 overflow-scroll max-h-[88px]">
+                    <div class="flex flex-col justify-center space-y-3">
+                        ${projects.map((project, index) => `
+                            <button 
+                                class="dot w-3 h-3 rounded-full bg-[#D9D9D9]" 
+                                id="dot-${index}" 
+                                onclick="scrollToSection('${project.title}')"
+                            ></button>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
         function populateProjects() {
             scrollContainer.innerHTML = projects.map(createProjectSection).join('');
         }
 
+        function appendPagination(){
+            paginationContainer.innerHTML = createPaginationDots(projects);
+        }
+
+        // Function to scroll to the respective section when a dot is clicked
+        function scrollToSection(projectId) {
+            document.getElementById(projectId).scrollIntoView({ behavior: 'smooth' });
+            // The active dot will update automatically using IntersectionObserver
+        }
+
+        // Function to update the active dot based on the project in view
+        function updateActiveDot(projectId) {
+            projects.forEach((project, index) => {
+                const dot = document.getElementById(`dot-${index}`);
+                const paginationDots = document.querySelector('.pagination-dots'); // Target the scrollable dots container
+
+                if (project.title === projectId) {
+                    dot.style.backgroundColor = '#9B79E5'; // Active dot color
+
+                    // Scroll pagination only if the active dot is beyond the 4th dot
+                    if (index >= 1) {
+                        const scrollAmount = 24 * index; // Calculate scroll amount based on the dot index
+                        paginationDots.scrollTo({
+                            top: scrollAmount,
+                            behavior: 'smooth' // Add smooth scrolling behavior
+                        });
+                    } else {
+                        paginationDots.scrollTo({
+                            top: 0,
+                            behavior: 'smooth' // Reset scroll smoothly if it's within the first four dots
+                        });
+                    }
+                } else {
+                    dot.style.backgroundColor = '#D9D9D9'; // Inactive dot color
+                }
+            });
+        }
+
+
+
+
+
+        // Set up the IntersectionObserver to observe each project section
+        function setupObserver() {
+            const options = {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.6 // The percentage of the target's visibility the observer's callback should trigger on
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateActiveDot(entry.target.id); // Update the active dot when the section is in view
+                    }
+                });
+            }, options);
+
+            // Observe each project section
+            projects.forEach(project => {
+                const projectSection = document.getElementById(project.title);
+                if (projectSection) {
+                    observer.observe(projectSection);
+                }
+            });
+        }
+
+        // Call the setupObserver function after populating the projects
         populateProjects();
+        appendPagination();
+        setupObserver();
        
         document.addEventListener('DOMContentLoaded', (event) => {
             const wrapper = document.querySelector('.scrolling-wrapper');
